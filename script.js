@@ -60,3 +60,68 @@ if(a>=0 && b>=0){
 } else{
 	alert('не введены целые числа');	
 }
+
+// exercise 4
+
+let someNumber1 = parseInt(prompt('ввод первой цифры'));
+let someNumber2 = parseInt(prompt('ввод второй цифры'));
+let action = prompt('для умножения нажмите "у" или "y". для деления "д" или "d". для сложения "с" или "c". для вычетания "в" или "v".');
+action = action.toLowerCase();
+
+
+function mult(numb1, numb2) {
+	return numb1 * numb2;
+}
+let multResult = mult(someNumber1, someNumber2);
+console.log(someNumber1 + ' * ' + someNumber2 + ' = ' + multResult);
+
+function divis(numb1, numb2) {
+	if (someNumber2 == 0) {
+		return -0;
+	}
+	return numb1 / numb2;
+}
+let divisResult = divis(someNumber1, someNumber2);
+console.log(someNumber1 + ' / ' + someNumber2 + ' = ' + divisResult);
+
+function add(numb1, numb2) {
+	return numb1 + numb2;
+}
+let addResult = add(someNumber1, someNumber2);
+console.log(someNumber1 + ' + ' + someNumber2 + ' = ' + addResult);
+
+function subtr(numb1, numb2) {
+	return numb1 - numb2;
+}
+let subtrResult = subtr(someNumber1, someNumber2);
+console.log(someNumber1 + ' - ' + someNumber2 + ' = ' + subtrResult);
+
+/*
+if (action == "у" || action == "y") {
+	alert('результат умножения ' + multResult);
+} else if(action == "д" || action == "d") {
+	alert('результат деления ' + divisResult);
+} else if(action == "с" || action == "c") {
+	alert('результат сложения ' + addResult);
+} else if(action == "в" || action == "v") {
+	alert('результат вычетания ' + subtrResult);
+} else {
+	alert('что-то пошло не так :(');
+}
+*/
+
+// exercise 5 - это задание по прежнему не понимаю((
+function mathOperation(arg1, arg2, operation) {
+	operation = action.toLowerCase();
+	switch (operation) {
+		case "у" || "y":
+			return mult(arg1, arg2);
+		case "д" || "d":
+			return divis(arg1, arg2);
+		case "с" || "c":
+			return add(arg1, arg2);
+		case "в" || "v":
+			return subtr(arg1, arg2);
+		
+	}
+}

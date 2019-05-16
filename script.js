@@ -106,15 +106,3 @@ const sortByPrice = product.sort(function(a, b) {
 
 console.log(sortByPrice);
 
-
-//задание 6
-
-let x = 'x';
-for (let i = 0; i <= 20; i++) {
-	console.log(x);
-}
-
-
-
-
-

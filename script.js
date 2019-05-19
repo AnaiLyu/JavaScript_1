@@ -59,8 +59,12 @@ const products = [
 	},
 ];
 
+// const discount = products.map(function(num) {
+// 	return num.price / 2;
+// });
 const discount = products.map(function(num) {
-	return num.price / 2;
+	num.price /= 2;
+	return num;
 });
 
 console.log(discount);

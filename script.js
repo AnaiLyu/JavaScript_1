@@ -106,3 +106,4 @@ const sortByPrice = product.sort(function(a, b) {
 
 console.log(sortByPrice);
 
+
